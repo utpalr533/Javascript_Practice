@@ -17,3 +17,10 @@ let num2 = 42;
 let result2 =  str2.concat(" ", num2)
 console.log(result2); // Output: The answer is 42
 console.log(typeof(result2)); // Output: string
+
+
+
+
+let string = "hello, world"
+let result3 = string.slice(0,12)
+console.log(result3);
