@@ -13,8 +13,22 @@ console.log(
   age2 >= 18 ? `You are an adult. Your age is ${age2}.` :
   "Invalid age."
 );
+ 
 
+let Viratage =22;
+if (Viratage >0 && Viratage<= 12){
+    console.log('HE iS Child');    
+}
+else if (Viratage>=13 && Viratage<=17){
+    console.log("He is a teenager.");
+}
+else if (Viratage>=18){
+    console.log("He is Gay.");
+}
+else{
+    console.log("Invalid age.");
 
+}
 let UtpalAge = 25;
 if (UtpalAge>=0 && UtpalAge<=12){
     console.log("You are a child. Your age is " + UtpalAge);
@@ -77,16 +91,16 @@ console.log(
 )
  let Variableage2 = 15;
  console.log(
-    Variableage2<0? "Invalid age":
-    Variableage2<=12? `Child: age is ${Variableage2}`:
-    Variableage2<=17? `Teenager: age is ${Variableage2}`:
+    Variableage2 <=0  ? "Invalid age":
+    Variableage2 <=12 ? `Child: age is ${Variableage2}`:
+    Variableage2 <=17 ? `Teenager: age is ${Variableage2}`:
     `Adult: age is ${Variableage2}`
 )
 let Variableage3 = 20;
 console.log(
-    Variableage3<0? "Invalid age":
-    Variableage3<=12? `Child: age is ${Variableage3}`:
-    Variableage3<=17? `Teenager: age is ${Variableage3}`:
+    Variableage3 <0? "Invalid age":
+    Variableage3 <=12? `Child: age is ${Variableage3}`:
+    Variableage3 <=17? `Teenager: age is ${Variableage3}`:
     `Adult: age is ${Variableage3}`
 )
 let Variableage4 = -5;
