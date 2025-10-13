@@ -110,3 +110,21 @@ console.log(
     Variableage4<=17? `Teenager: age is ${Variableage4}`:
     `Adult: age is ${Variableage4}`
 )
+
+
+const disNumber = 3;
+switch (disNumber) {
+    case 1:
+        console.log("You ordered a burger")
+        break;
+    case 2:
+        console.log("You ordered a pizza")
+        break;
+    case 3:
+        console.log("You ordered a pasta")
+        break;
+    default:
+        console.log("Invalid order")
+        break;        
+    
+}
