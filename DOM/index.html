@@ -17,10 +17,21 @@
 <div id="Hello">Hellow World</div>
     <div>Hi there</div>
 
-    <ul></ul>
+     <ul>
+            <li class = "green">Item 1</li>
+            <li>Item 2</li>
+            <li class= "green">Item 3</li>
+            </ul>
     <script>
-        // console.log(document.getElementById('Hello'));
-        
+         //console.log(document.getElementById('Hello'));
+       
+           // let item = document.getElementsByClassName('green');
+          //  console.log(item);
+          //let item = document.getElementsByTagName('li');
+          //console.log(item);
+
+            let item = document.querySelectorAll('li.green');
+            console.log(item);
     </script>
 </body>
 </html>
