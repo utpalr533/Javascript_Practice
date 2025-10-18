@@ -6,9 +6,13 @@
     <title>DOM</title>
 </head>
 <body>
-    <h1>DOM Selectors</h1>
+    <h1 id="1">DOM Selectors</h1>
     <div id="hello">Dom Manupulating</div>
-    <div>Hi there</div>
+  
+   <div>
+    <span id="one" name = "First">First Span</span>
+    <span id="two" name = "Second">Secoind Span</span>
+   </div> 
     <script>
         // document.getElementById('hello').style.color = 'blue';
         // document.getElementById('hello').style.backgroundColor = 'yellow';
@@ -16,16 +20,52 @@
         // document.getElementById('hello').style.textAlign = 'center';
         // console.log('hello');
         
-        console.dir(document.URL);
-        console.dir(document.title)
-        document.title = "Dom Manipulation";
+        // console.dir(document.URL);
+        // console.dir(document.title)
+        // document.title = "Dom Manipulation";
 
-        const body = document.body
-        body.append(" - Welcome to the DOM Manipulation");
-        const div = document.createElement('div');
-        div.innerText = "This is a new div created using JS";
-        body.appendChild(div);
+        // const body = document.body
+        // body.append(" - Welcome to the DOM Manipulation");
+        // const div = document.createElement('div');
+        // div.innerText = "This is a new div created using JS";
+        // body.appendChild(div);
+
+       // StereoPannerNode
+
         
+       const div = document.querySelector('div');
+       const spanOne = document.querySelector('#one');
+       const spanTwo = document.querySelector('#two');
+       console.log(spanOne.getAttribute('name'));
+       spanOne.setAttribute('name', 'UpdatedFirst');
+       spanOne.removeAttribute('name');
+       spanOne.id = 'updatedOne';
+       spanTwo.classList.add('highlight');
+       spanTwo.classList.remove('highlight');
+       console.log(spanTwo.classList);
+       spanOne.style.color = 'red';
+       spanOne.style.fontWeight = 'bold';
+       spanOne.style.backgroundColor = 'black';
+       spanTwo.style.color = 'green';
+       spanTwo.style.backgroundColor = 'skyblue';
+       spanTwo.style.fontWeight = 'italic';
+       spanTwo.style.padding = '3px';
+       spanTwo.style.margin = '3px';
+       spanTwo.style.border = '2px solid yellow';
+       spanTwo.style.borderRadius = '3px';
+       spanOne.style.borderRadius = '3px';
+       spanOne.style.padding = '3px';
+       spanOne.style.margin = '3px';
+       spanOne.style.border = '2px solid yellow';
+       spanOne.innerText = 'Updated First Span';
+       spanOne.style.textAlign = '20px';
+       spanOne.style.position = 'relative';
+       spanOne.style.left = '3px';
+       spanOne.style.top = '10px';
+       spanTwo.style.position = 'relative';
+       spanTwo.style.left = '-3px';
+       spanTwo.style.top = '10px';
+       spanOne.style.fontfamily = 'Lucida Handwriting';
     </script>
 </body>
 </html>
