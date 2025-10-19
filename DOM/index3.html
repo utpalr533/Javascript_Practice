@@ -6,6 +6,18 @@
     <title>DOM </title>
 </head>
 <body>
-    
+    <input type="text" id="searBox">
+    <button id="myButton">Click me</button>
+    <script>
+        // const button = document.querySelector('#myButton');
+        // button.addEventListener('click', () => {
+        //     alert('Button was clicked!');
+        // });
+        const searBox = document.querySelector('searBox');
+        searBox.addEventListener('input', () => {
+            console.log('Input value changed to:');
+        });
+    </script>
 </body>
+
 </html>
