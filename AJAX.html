@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>User</h1>
+    <ul id="userLists"></ul>
+    <script>
+        const userLists = document.querySelector('#userLists')
+        const xhr = new XMLHttpRequest()
+        xhr.onreadystatechange = function(){
+            if (xhr.readyState === XMLHttpRequest.DONE){
+                if(xhr.status === 200){
+                    const userData = JSON.parse(xhr.responseText)
+                    userData.forEach((user) => {
+                        const newUser = document.createElement('li')
+                        const newUsertext = document.createTextNode(user.name)
+                        newUser.appendChild(newUsertext)
+                        userLists.appendChild(newUser)
+                    });
+                } else {
+                    console.error('Error fetching user data')
+                }
+            }
+        }
+        xhr.open('GET', 'https://jsonplaceholder.typicode.com/users')
+        xhr.send()
+    </script>
+</body>
+</html>
