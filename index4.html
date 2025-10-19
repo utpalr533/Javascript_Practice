@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My favorite foods </h1>
+    <ul id="foodlist">
+        <li>Pizza</li>
+        <li>Sushi</li>
+    </ul>
+    <button id="addbutton">Add Burger</button>
+    <button id="removebutton">Remove Burger</button>
+    <button id="button">Add Sushi</button>
+    <button id="removeButton">Renove Sushi</button>
+    <script>
+           const addbutton = document.querySelector('#addbutton')
+        const removebutton = document.querySelector('#removebutton')
+        const foodlist = document.querySelector('#foodlist')
+        addbutton.addEventListener('click', ()=>{
+            const newlistitem = document.createElement('li')
+            newlistitem.textContent = 'Burgers' // changed from 'Tacos' to 'Burgers'
+            foodlist.appendChild(newlistitem)
+        })
+        removebutton.addEventListener('click', ()=>{
+            if (foodlist.lastElementChild) {
+                foodlist.removeChild(foodlist.lastElementChild)
+            }
+        })
+        const button = document.querySelector('#button')
+        const removeButton = document.querySelector('#removeButton')
+        
+        // Add Sushi
+        button.addEventListener('click', ()=>{
+            const newlistitem = document.createElement('li')
+            newlistitem.textContent = 'Sushi'
+            foodlist.appendChild(newlistitem)
+        })
+
+        // Remove last "Sushi" item (falls back to removing last item if none found)
+        removeButton.addEventListener('click', ()=>{
+            const items = Array.from(foodlist.querySelectorAll('li'))
+            for (let i = items.length - 1; i >= 0; i--) {
+                if (items[i].textContent.trim() === 'Sushi') {
+                    foodlist.removeChild(items[i])
+                    return
+                }
+            }
+            if (foodlist.lastElementChild) {
+                foodlist.removeChild(foodlist.lastElementChild)
+            }
+        })
+        
+    </script>
+</body>
+</html>
