@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery with jQuery</title>
-  <link rel="stylesheet" href="style.css">
+  <title>To-Do App (Advanced)</title>
+  <link rel="stylesheet" href=styles.css>
+<!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src=main.js></script>
+
+  
 </head>
 <body>
 
-  <div class="gallery-container">
-    <div class="large-image">
-      <img id="mainImage" src="https://imgs.search.brave.com/itC3919iHBLlFlHL1JnYaAOp5iRoGl4WVRP0chNShY8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1wc2Qv/bWFzdGVyLXlvdXIt/eW91dHViZS10aHVt/Ym5haWxzLWV5ZWNh/dGNoaW5nLWRlc2ln/bnMtcHNkLXRlbXBs/YXRlXzk5NDEzNS01/Mi5qcGc_c2VtdD1h/aXNfaW5jb21pbmcm/dz03NDAmcT04MA" alt="Large View">
-    </div>
+  <h1>To-Do App ✅</h1>
 
-    <ul class="thumbnails">
-      <li><img src="https://imgs.search.brave.com/JyksbXM1t2kpIXPq8ysV4UFXLRFRhU2d8miXD_ouAek/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1wc2Qv/dGltZS10cmF2ZWwt/dGh1bWJuYWlsLWRl/c2lnbl8xMDYwMTI5/LTIwMC5qcGc_c2Vt/dD1haXNfaHlicmlk/Jnc9NzQwJnE9ODA" data-large="images/image1-large.jpg" alt="Thumbnail 1"></li>
-      <li><img src="https://imgs.search.brave.com/wDp1xETFD_9RFA0A1gQLzZMIPq6s0n9ihC_K2B2hQLM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/bW9kZXJuLXlvdXR1/YmUtdGh1bWJuYWls/LXdpdGgtY29taWMt/YXJ0LWJhY2tncm91/bmRfMTM2MS0yNzM4/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDAmcT04MA" data-large="images/image2-large.jpg" alt="Thumbnail 2"></li>
-      <li><img src="https://imgs.search.brave.com/MKUs35SrgTwp5w0-SHAh8gQ9lP-ZE6GnPyjGHkUpRPo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1wc2QvY3Jl/YXRpdmUteW91dHVi/ZS10aHVtYm5haWwt/ZGVzaWduLXRlbXBs/YXRlXzUwNTc1MS02/MjU1LmpwZz9zZW10/PWFpc19oeWJyaWQm/dz03NDAmcT04MA" data-large="images/image3-large.jpg" alt="Thumbnail 3"></li>
-      <li><img src="https://imgs.search.brave.com/kfrIn_XNl0VohlfBeog43siiZySJRS_2DX52rX4EY44/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1wc2Qv/dHJlbmR5LXlvdXR1/YmUtdGh1bWJuYWls/LWRlc2lnbi10ZW1w/bGF0ZV85NDE4MDIt/NDczOS5qcGc_c2Vt/dD1haXNfaHlicmlk/Jnc9NzQwJnE9ODA" data-large="images/image4-large.jpg" alt="Thumbnail 4"></li>
-    </ul>
-  </div>
+  <form id="taskForm">
+    <input type="text" id="taskinput" placeholder="Add a new task" required>
+    <button type="submit">Add Task</button>
+  </form>
 
-  <script src="script.js"></script>
+  <ul id="tasklist"></ul>
 </body>
 </html>
